@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éric Allain — Services informatiques</title>
+<meta name="description" content="Gestion d'infrastructure informatique, soutien et dépannage, conformité et sécurité. Éric Allain, certifié Microsoft, 25 ans d'expérience, en service 24/7.">
+<link rel="icon" type="image/webp" href="img/logo.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#000;--dark2:#0E0E0E;--dark3:#141414;--gold:#C8952A;--gold-light:#E4B84A;--silver:#D5D5D1;--white:#fff;--muted:rgba(255,255,255,.62);--border:rgba(200,149,42,.18);--max:1160px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'Outfit',sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+
+/* NAV — les liens vivent ici, jamais dans la bannière */
+nav{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:18px 64px;border-bottom:1px solid var(--border);background:rgba(0,0,0,.92);position:sticky;top:0;z-index:100;backdrop-filter:blur(24px)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:40px;height:40px;object-fit:contain}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:3px;line-height:1}
+.brand-name .ea{color:var(--gold)}
+.brand-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;color:rgba(200,149,42,.55);text-transform:uppercase}
+.nav-links{display:flex;gap:30px;list-style:none;align-items:center}
+.nav-links a{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{border:1px solid var(--gold);color:var(--gold);padding:10px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold);color:var(--black)}
+
+/* BANNIÈRE — aucun lien, aucun bouton de navigation */
+.banner{position:relative;background:#f3f2ee;color:#111;overflow:hidden;border-bottom:1px solid var(--border)}
+.slide{display:none;position:relative;min-height:560px;background-size:cover;background-position:right center;background-repeat:no-repeat}
+.slide.is-active{display:block;animation:fade .6s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.slide-inner{max-width:var(--max);margin:0 auto;padding:64px 64px 72px;display:flex;flex-direction:column;gap:26px;min-height:560px;justify-content:center}
+.slide h1,.slide h2.t{font-family:'Outfit',sans-serif;font-weight:300;font-size:clamp(30px,4vw,52px);line-height:1.15;max-width:560px}
+.slide h1 strong,.slide h2.t strong{font-weight:700;display:block;letter-spacing:1px}
+.slide .lead{font-size:clamp(18px,2vw,24px);font-weight:300;max-width:520px}
+.slide .lead strong{font-weight:700}
+.slide .lead .g{color:#9a6f14}
+.slide ul{list-style:none;display:grid;gap:4px;font-size:15px;letter-spacing:.5px;max-width:520px}
+.slide li::before{content:'';display:inline-block;width:5px;height:5px;background:var(--gold);margin-right:12px;vertical-align:middle}
+.icons{display:flex;gap:30px;align-items:flex-end}
+.icons figure{text-align:center;font-size:12px;letter-spacing:2px;font-weight:600;text-transform:uppercase}
+.icons img{width:64px;height:auto;display:block;margin:0 auto 2px}
+.sign{font-size:13px;letter-spacing:1.5px;font-weight:600}
+.sign b{font-weight:700}
+.sign .g{color:#9a6f14}
+.sign small{display:block;font-weight:400;letter-spacing:.5px;font-size:12.5px;margin-top:2px;color:#333}
+.badge{position:absolute;right:calc(50% - 150px);bottom:34px;width:150px;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+.dots{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
+.dots button{width:9px;height:9px;border-radius:50%;border:1px solid #9a6f14;background:transparent;cursor:pointer;padding:0}
+.dots button[aria-current="true"]{background:#9a6f14}
+
+/* SECTIONS */
+section.s{padding:96px 64px;position:relative}
+.wrap{max-width:var(--max);margin:0 auto}
+.label{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.label i{width:48px;height:1px;background:var(--gold)}
+.label span{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+h2.h{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.15;margin-bottom:14px}
+h2.h em{color:var(--gold-light)}
+.intro{color:var(--muted);max-width:640px;margin-bottom:44px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.card{background:var(--dark2);padding:34px 30px}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;color:var(--gold-light);margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+.band{background:var(--dark3);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.checks{list-style:none;display:grid;gap:14px}
+.checks li{padding-left:28px;position:relative;color:var(--silver)}
+.checks li::before{content:'✓';position:absolute;left:0;color:var(--gold)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.fact{background:var(--dark2);padding:28px 22px;text-align:center}
+.fact b{display:block;font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold-light);font-weight:600}
+.fact span{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.cta{text-align:center}
+.cta p{color:var(--muted);max-width:560px;margin:0 auto 32px}
+.btn{display:inline-block;background:var(--gold);color:var(--black);padding:14px 36px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s}
+.btn:hover{background:var(--gold-light)}
+footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:30px 64px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
+
+@media(max-width:900px){
+ nav{padding:14px 20px;flex-wrap:wrap}.nav-links{gap:18px;flex-wrap:wrap}
+ .slide{background-position:70% center}
+ .slide::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(243,242,238,.94) 0%,rgba(243,242,238,.8) 70%,rgba(243,242,238,.5) 100%)}
+ .slide-inner{padding:40px 20px 60px;position:relative}
+ .badge{display:none}
+ section.s{padding:64px 20px}.grid,.cols,.facts{grid-template-columns:1fr}
+ footer{padding:24px 20px}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation principale">
+  <div class="brand">
+    <img src="img/logo.webp" alt="">
+    <div>
+      <div class="brand-name"><span class="ea">ÉRIC</span> ALLAIN</div>
+      <div class="brand-tag">Services informatiques</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#securite">Sécurité</a></li>
+    <li><a href="#approche">Approche</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Me joindre</a>
+</nav>
+
+<header class="banner" aria-roledescription="carrousel" aria-label="Présentation">
+  <div class="slide is-active" style="background-image:url('img/banner-infrastructure.webp')">
+    <div class="slide-inner">
+      <h1>Gestion de votre <strong>INFRASTRUCTURE</strong> informatique</h1>
+      <p class="lead">Un environnement toujours <strong>PERFORMANT</strong></p>
+      <ul>
+        <li>MISES À JOUR</li>
+        <li>ENTRETIEN et SURVEILLANCE</li>
+        <li>SOUTIEN et DÉPANNAGE</li>
+      </ul>
+      <div class="icons">
+        <figure><img src="img/icon-serveurs.png" alt="">Serveurs</figure>
+        <figure><img src="img/icon-postes.png" alt="">Postes de travail</figure>
+        <figure><img src="img/icon-cloud.png" alt="">Cloud</figure>
+      </div>
+      <div class="sign"><b>ÉRIC ALLAIN</b> <span class="g">— En service 24/7</span><small>Certifié Microsoft · 25 ans d’expérience en informatique</small></div>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('img/banner-conformite.webp')">
+    <div class="slide-inner">
+      <h2 class="t">CONFORMITÉ et sécurité informatique</h2>
+      <p class="lead"><span class="g">Des accès</span> <strong>MAÎTRISÉS</strong><br><span class="g">Des données</span> <strong>PROTÉGÉES</strong></p>
+      <ul>
+        <li>CONFORMITÉ et SUIVI DES EXIGENCES</li>
+        <li>PROTECTION DES SYSTÈMES et des DONNÉES</li>
+        <li>GESTION DES ACCÈS et des PERMISSIONS</li>
+        <li>SURVEILLANCE et PRÉVENTION DES MENACES</li>
+      </ul>
+      <div class="sign"><b>ÉRIC ALLAIN</b> <span class="g">— En service 24/7</span><small>Certifié Microsoft · 25 ans d’expérience en informatique</small></div>
+    </div>
+    <img class="badge" src="img/badge-securite.webp" alt="Sécurité et conformité">
+  </div>
+  <div class="dots" role="group" aria-label="Choisir la bannière">
+    <button type="button" aria-label="Infrastructure" aria-current="true"></button>
+    <button type="button" aria-label="Conformité et sécurité" aria-current="false"></button>
+  </div>
+</header>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="label"><i></i><span>Infrastructure</span></div>
+    <h2 class="h">Un environnement <em>toujours performant</em></h2>
+    <p class="intro">Gestion complète de votre parc informatique, des postes de travail aux serveurs et au cloud.</p>
+    <div class="grid">
+      <div class="card"><h3>Mises à jour</h3><p>Correctifs et mises à jour planifiés pour garder vos systèmes à niveau.</p></div>
+      <div class="card"><h3>Entretien et surveillance</h3><p>Surveillance continue de l’état de votre infrastructure et entretien préventif.</p></div>
+      <div class="card"><h3>Soutien et dépannage</h3><p>Une personne-ressource directe pour résoudre les incidents et soutenir vos utilisateurs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s band" id="securite">
+  <div class="wrap cols">
+    <div>
+      <div class="label"><i></i><span>Conformité et sécurité</span></div>
+      <h2 class="h">Des accès <em>maîtrisés</em>.<br>Des données <em>protégées</em>.</h2>
+    </div>
+    <ul class="checks">
+      <li>Conformité et suivi des exigences</li>
+      <li>Protection des systèmes et des données</li>
+      <li>Gestion des accès et des permissions</li>
+      <li>Surveillance et prévention des menaces</li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="approche">
+  <div class="wrap">
+    <div class="label"><i></i><span>Approche</span></div>
+    <h2 class="h">Un seul interlocuteur, <em>en service 24/7</em></h2>
+    <p class="intro">Éric Allain assure lui-même la gestion de votre environnement informatique.</p>
+    <div class="facts">
+      <div class="fact"><b>24/7</b><span>En service</span></div>
+      <div class="fact"><b>25 ans</b><span>d’expérience</span></div>
+      <div class="fact"><b>Microsoft</b><span>Certifié</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s band cta" id="contact">
+  <div class="wrap">
+    <h2 class="h">Parlons de votre <em>infrastructure</em></h2>
+    <p>Décrivez-moi votre environnement et votre besoin : je reviens vers vous.</p>
+    <a class="btn" href="mailto:info@ea-ia.ca?subject=Services%20informatiques">Me joindre</a>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Éric Allain — Services informatiques</div>
+  <div>info@ea-ia.ca</div>
+</footer>
+
+<script>
+(function(){
+  var slides=document.querySelectorAll('.slide'),dots=document.querySelectorAll('.dots button'),i=0,t;
+  function show(n){i=n;slides.forEach(function(s,k){s.classList.toggle('is-active',k===n)});dots.forEach(function(d,k){d.setAttribute('aria-current',k===n)})}
+  function start(){t=setInterval(function(){show((i+1)%slides.length)},8000)}
+  dots.forEach(function(d,k){d.addEventListener('click',function(){clearInterval(t);show(k);start()})});
+  start();
+})();
+</script>
+</body>
+</html>
