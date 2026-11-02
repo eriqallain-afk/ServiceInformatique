@@ -81,6 +81,7 @@ h2.h em{color:var(--gold-light)}
 .cta p{color:var(--muted);max-width:560px;margin:0 auto 32px}
 .btn{display:inline-block;background:var(--gold);color:var(--black);padding:14px 36px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s}
 .btn:hover{background:var(--gold-light)}
+.transp{flex-basis:100%;font-size:13px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
 footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:30px 64px;border-top:1px solid var(--border);color:var(--muted);font-size:13px}
 
 /* CONTENU */
@@ -241,7 +242,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
     <table class="plans fees">
       <thead><tr><th scope="col">Étape</th><th scope="col">Prix</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Audit de sécurité, avant tout engagement. Si vous devenez client, 25 % (625 $) est crédité sur la prise en charge.</th><td>2 500 $</td></tr>
+        <tr><th scope="row">Audit de l’infrastructure, avant tout engagement. Si vous devenez client, 25 % (625 $) est crédité sur la prise en charge.</th><td>2 500 $</td></tr>
         <tr><th scope="row">Prise en charge : passation, inventaire, documentation, indice de risque de départ. Selon le temps requis : nombre de sites et de serveurs.</th><td class="wrap">Sur soumission</td></tr>
         <tr><th scope="row">Corrections et projets, soumis et approuvés d’avance. Même taux le soir que le jour.</th><td>200 $/h</td></tr>
       </tbody>
@@ -255,7 +256,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
     <div class="label"><i></i><span>Comment ça se passe</span></div>
     <h2 class="h">Quatre étapes, <em>sans surprise</em></h2>
     <ol class="steps">
-      <li><h3>Audit de sécurité (facultatif)</h3><p>Avant tout engagement, si vous le souhaitez : lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 2 500 $. Si vous devenez client, 25 % de ce montant (625 $) est crédité sur la prise en charge.</p></li>
+      <li><h3>Audit de l’infrastructure</h3><p>Pour bien gérer un environnement, il faut d’abord le connaître. Avant tout engagement, l’audit me donne l’information nécessaire : lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 2 500 $. Si vous devenez client, 25 % de ce montant (625 $) est crédité sur la prise en charge.</p></li>
       <li><h3>Prise en charge</h3><p>Passation avec votre fournisseur actuel, accès, inventaire complet, documentation, indice de risque de départ.</p></li>
       <li><h3>Corrections</h3><p>Les problèmes hérités sont corrigés par priorité, selon la soumission que vous avez approuvée. Aucune facture-surprise.</p></li>
       <li><h3>Service mensuel</h3><p>Forfait Essentiel ou Complet, prix fixe.</p></li>
@@ -291,15 +292,16 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 <section class="s band cta" id="contact">
   <div class="wrap">
     <h2 class="h">Parlons de votre <em>environnement.</em></h2>
-    <p>Décrivez-moi votre besoin : je reviens vers vous. Vous pouvez commencer par un audit de sécurité, mais ce n’est pas obligatoire.</p>
+    <p>Décrivez-moi votre besoin : je reviens vers vous. La première étape est un audit de l’infrastructure : il me donne l’information nécessaire pour bien gérer votre environnement.</p>
     <a class="btn" href="mailto:info@ea-ia.ca?subject=Services%20TI%20-%20Demande">Me joindre</a>
-    <p class="alt"><a class="sec" href="mailto:info@ea-ia.ca?subject=Audit%20s%C3%A9curit%C3%A9%20-%20Services%20TI">Demander l’audit de sécurité</a></p>
+    <p class="alt"><a class="sec" href="mailto:info@ea-ia.ca?subject=Audit%20infrastructure%20-%20Services%20TI">Demander l’audit de l’infrastructure</a></p>
   </div>
 </section>
 
 <footer>
   <div>© 2026 Éric Allain — Services informatiques</div>
   <div>Prix en dollars canadiens, avant taxes.</div>
+  <p class="transp">EA|IA conçoit aussi des outils d’IA pour les fournisseurs de services TI. Les deux activités sont séparées : aucune information provenant de l’une n’est utilisée par l’autre.</p>
 </footer>
 
 <script>
