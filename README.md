@@ -5,8 +5,8 @@ Design dérivé du site EAIA (charte noir / or), avec une bannière sans liens :
 dans la barre au-dessus.
 
 ## Structure
-- `index.html` — page d'accueil (bannières Infrastructure + Conformité/sécurité, services, approche, contact)
-- `img/` — bannières (WebP), icônes, badge, logo
+- `index.html` — page unique « Services TI gérés pour PME » (bannières, engagements, forfaits, étapes, prix, FAQ)
+- `img/` — bannières (WebP), icônes, badge
 - `.nojekyll` — HTML brut
 
 ## Règles
