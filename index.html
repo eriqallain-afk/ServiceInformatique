@@ -96,6 +96,12 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 .plans thead th{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
 .plans tbody th{font-weight:400;color:var(--silver)}
 .plans td{text-align:center;color:var(--gold-light);width:96px}
+.plans tr.price td{font-weight:600;white-space:nowrap}
+.plans tr.price th{color:var(--gold-light)}
+.plans.fees{margin-top:8px}
+.plans.fees td{width:130px;white-space:nowrap;font-weight:600}
+.sub-h{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold-light);margin:44px 0 16px}
+.notes-p{color:var(--muted);font-size:14px;margin-top:16px}
 .notes{list-style:none;margin-top:22px;display:grid;gap:8px;color:var(--muted);font-size:14px}
 .steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 .steps li{counter-increment:s;background:var(--dark2);padding:30px;position:relative}
@@ -105,7 +111,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 .faq details{border-bottom:1px solid var(--border);padding:16px 0}
 .faq summary{cursor:pointer;font-weight:600;color:var(--silver)}
 .faq details p{color:var(--muted);margin-top:10px;font-size:15px}
-@media(max-width:900px){.steps{grid-template-columns:1fr}.plans th,.plans td{padding:12px 10px;font-size:14px}.plans td{width:64px}}
+@media(max-width:900px){.steps{grid-template-columns:1fr}.plans th,.plans td{padding:12px 10px;font-size:14px}.plans td{width:84px}.plans.fees td{width:92px}}
 
 @media(max-width:900px){
  nav{padding:14px 20px;flex-wrap:wrap}.nav-links{gap:18px;flex-wrap:wrap}
@@ -221,12 +227,24 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
         <tr><th scope="row">Conseil stratégique mensuel (vCIO) : feuille de route, budget TI, fournisseurs</th><td>—</td><td>✓</td></tr>
         <tr><th scope="row">Cybersécurité avancée : surveillance et détection 24/7, indice de risque semestriel</th><td>—</td><td>✓</td></tr>
         <tr><th scope="row">Documentation de conformité Loi 25</th><td>—</td><td>✓</td></tr>
+        <tr class="price"><th scope="row">Par utilisateur, par mois</th><td>dès 160 $</td><td>dès 200 $</td></tr>
+        <tr class="price"><th scope="row">Par serveur, par mois</th><td>320 $</td><td>320 $</td></tr>
       </tbody>
     </table>
     <ul class="notes">
       <li>Les licences Microsoft et la consommation Azure restent facturées par Microsoft ou votre fournisseur de licences.</li>
       <li>Les projets (migration, déménagement, corrections après la prise en charge) sont soumis et approuvés d’avance, au même taux le soir que le jour.</li>
     </ul>
+    <h3 class="sub-h">Frais uniques</h3>
+    <table class="plans fees">
+      <thead><tr><th scope="col">Étape</th><th scope="col">Prix</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Audit de sécurité, avant tout engagement. Crédité sur la prise en charge si vous devenez client.</th><td>2 500 $</td></tr>
+        <tr><th scope="row">Prise en charge : passation, inventaire, documentation, indice de risque de départ.</th><td>dès 1 500 $</td></tr>
+        <tr><th scope="row">Corrections et projets, soumis et approuvés d’avance. Même taux le soir que le jour.</th><td>200 $/h</td></tr>
+      </tbody>
+    </table>
+    <p class="notes-p">Prix indicatifs en dollars canadiens, avant taxes. La proposition finale est établie selon votre contrat actuel et présentée sur deux ans.</p>
   </div>
 </section>
 
@@ -235,7 +253,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
     <div class="label"><i></i><span>Comment ça se passe</span></div>
     <h2 class="h">Quatre étapes, <em>sans surprise</em></h2>
     <ol class="steps">
-      <li><h3>Audit de sécurité</h3><p>Avant tout engagement : lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 1 000 $, entièrement crédité si vous devenez client.</p></li>
+      <li><h3>Audit de sécurité</h3><p>Avant tout engagement : lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 2 500 $, crédité sur la prise en charge si vous devenez client.</p></li>
       <li><h3>Prise en charge</h3><p>Passation avec votre fournisseur actuel, accès, inventaire complet, documentation, indice de risque de départ.</p></li>
       <li><h3>Corrections</h3><p>Les problèmes hérités sont corrigés par priorité, selon la soumission que vous avez approuvée. Aucune facture-surprise.</p></li>
       <li><h3>Service mensuel</h3><p>Forfait Essentiel ou Complet, prix fixe.</p></li>
@@ -263,7 +281,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
       <details><summary>Pourquoi un nombre limité de clients ?</summary><p>Pour que la promesse « c’est moi qui réponds » reste vraie.</p></details>
       <details><summary>J’ai un contrat en cours avec mon fournisseur actuel.</summary><p>L’audit se fait sans engagement ; on planifie la transition à l’échéance.</p></details>
       <details><summary>Utilisez-vous l’intelligence artificielle ?</summary><p>Oui, pour la documentation, le triage et les rapports. Toute action sur votre environnement est validée par moi. Vos données restent encadrées selon la Loi 25.</p></details>
-      <details><summary>Que contient l’audit ?</summary><p>Lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 1 000 $, entièrement crédité si vous devenez client.</p></details>
+      <details><summary>Que contient l’audit ?</summary><p>Lecture de votre Microsoft 365, vérification externe, aperçu de votre parc. Vous recevez un rapport clair des risques et une soumission chiffrée des corrections. Prix : 2 500 $, crédité sur la prise en charge si vous devenez client.</p></details>
     </div>
   </div>
 </section>
