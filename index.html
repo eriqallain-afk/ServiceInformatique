@@ -33,9 +33,9 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 /* BANNIÈRE — aucun lien, aucun bouton de navigation */
 .banner{position:relative;background:#f3f2ee;color:#111;overflow:hidden;border-bottom:1px solid var(--border)}
 .banner{display:grid}
-.slide{grid-area:1/1;visibility:hidden;opacity:0;transition:opacity .6s ease;position:relative;min-height:560px;background-size:cover;background-position:right center;background-repeat:no-repeat}
+.slide{grid-area:1/1;display:flex;flex-direction:column;visibility:hidden;opacity:0;transition:opacity .6s ease;position:relative;min-height:560px;background-size:cover;background-position:right center;background-repeat:no-repeat}
 .slide.is-active{visibility:visible;opacity:1}
-.slide-inner{max-width:var(--max);margin:0 auto;padding:64px 64px 72px;display:flex;flex-direction:column;gap:26px;min-height:560px;justify-content:center}
+.slide-inner{flex:1;max-width:var(--max);margin:0 auto;padding:64px 64px 72px;display:flex;flex-direction:column;gap:26px;min-height:560px;justify-content:center}
 .slide .t{font-family:'Outfit',sans-serif;font-weight:300;font-size:clamp(30px,4vw,52px);line-height:1.15;max-width:560px}
 .slide .t strong{font-weight:700;display:block;letter-spacing:1px}
 .slide .lead{font-size:clamp(18px,2vw,24px);font-weight:300;max-width:520px}
@@ -54,6 +54,20 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 .dots{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
 .dots button{width:9px;height:9px;border-radius:50%;border:1px solid #9a6f14;background:transparent;cursor:pointer;padding:0}
 .dots button[aria-current="true"]{background:#9a6f14}
+@media(min-width:901px){
+ .slide,.slide-inner{min-height:clamp(560px,44vw,860px)}
+ .slide-inner{max-width:none;margin:0;width:52vw;padding:3.2vw 2vw 4.5vw 4.5vw;gap:1.9vw}
+ .slide .t{font-size:clamp(34px,4.4vw,88px);max-width:none}
+ .slide .lead{font-size:clamp(20px,2.4vw,48px);max-width:none}
+ .slide ul{font-size:clamp(15px,1.55vw,31px);gap:.5vw;max-width:none}
+ .slide li::before{width:.4em;height:.4em}
+ .icons{gap:2.4vw}
+ .icons figure{font-size:clamp(12px,1vw,20px)}
+ .icons img{width:clamp(64px,5.2vw,104px)}
+ .sign{font-size:clamp(13px,1.15vw,23px)}
+ .sign small{font-size:clamp(12.5px,1vw,20px)}
+ .badge{width:clamp(150px,11vw,220px);right:auto;left:46vw;bottom:3.5vw}
+}
 
 /* SECTIONS */
 section.s{padding:96px 64px;position:relative}
