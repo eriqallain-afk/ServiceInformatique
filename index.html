@@ -102,8 +102,9 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 .plans th,.plans td{padding:14px 16px;border-bottom:1px solid var(--border);text-align:left;font-size:15px;vertical-align:top}
 .plans thead th{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
 .plans tbody th{font-weight:400;color:var(--silver)}
-.plans td{text-align:center;color:var(--gold-light);width:96px}
-.plans tr.price td{font-weight:600;white-space:nowrap}
+.plans td{text-align:center;color:var(--gold-light);width:140px}
+.plans tr.price td{font-weight:600}
+.amt{white-space:nowrap}
 .plans tr.price th{color:var(--gold-light)}
 .plans.fees{margin-top:8px}
 .plans.fees td{width:130px;white-space:nowrap;font-weight:600}
@@ -119,7 +120,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 .faq details{border-bottom:1px solid var(--border);padding:16px 0}
 .faq summary{cursor:pointer;font-weight:600;color:var(--silver)}
 .faq details p{color:var(--muted);margin-top:10px;font-size:15px}
-@media(max-width:900px){.steps{grid-template-columns:1fr}.plans th,.plans td{padding:12px 10px;font-size:14px}.plans td{width:84px}.plans.fees td{width:92px}}
+@media(max-width:900px){.steps{grid-template-columns:1fr}.plans th,.plans td{padding:12px 8px;font-size:14px}.plans td{width:92px}.plans tr.price td{font-size:13px}.amt{display:block}.plans.fees td{width:92px}}
 
 @media(max-width:900px){
  nav{padding:14px 20px;flex-wrap:wrap}.nav-links{gap:18px;flex-wrap:wrap}
@@ -236,7 +237,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
         <tr><th scope="row">Conseil stratégique mensuel (vCIO) : feuille de route, budget TI, fournisseurs</th><td>—</td><td>✓</td></tr>
         <tr><th scope="row">Cybersécurité avancée : surveillance et détection 24/7, indice de risque semestriel</th><td>—</td><td>✓</td></tr>
         <tr><th scope="row">Documentation de conformité Loi 25</th><td>—</td><td>✓</td></tr>
-        <tr class="price"><th scope="row">Par utilisateur, par mois</th><td>dès 160 $</td><td>dès 250 $</td></tr>
+        <tr class="price"><th scope="row">Par utilisateur, par mois</th><td>à partir de <b class="amt">160 $</b></td><td>à partir de <b class="amt">250 $</b></td></tr>
         <tr class="price"><th scope="row">Par serveur, par mois</th><td>320 $</td><td>320 $</td></tr>
       </tbody>
     </table>
