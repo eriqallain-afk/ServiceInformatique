@@ -36,7 +36,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 .banner{display:grid}
 .slide{grid-area:1/1;display:flex;flex-direction:column;visibility:hidden;opacity:0;transition:opacity .6s ease;position:relative;min-height:560px;background-size:cover;background-position:right center;background-repeat:no-repeat}
 .slide.is-active{visibility:visible;opacity:1}
-.slide-inner{flex:1;max-width:var(--max);margin:0 auto;padding:64px 64px 72px;display:flex;flex-direction:column;gap:26px;min-height:560px;justify-content:center}
+.slide-inner{flex:1;max-width:var(--max);margin:0 auto;padding:64px 64px 72px;display:flex;flex-direction:column;gap:26px;min-height:560px;justify-content:flex-start}
 .slide .t{font-family:'Outfit',sans-serif;font-weight:300;font-size:clamp(30px,4vw,52px);line-height:1.15;max-width:560px}
 .slide .t strong{font-weight:700;display:block;letter-spacing:1px}
 .slide .lead{font-size:clamp(18px,2vw,24px);font-weight:300;max-width:520px}
@@ -56,7 +56,14 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 .dots button{width:9px;height:9px;border-radius:50%;border:1px solid #9a6f14;background:transparent;cursor:pointer;padding:0}
 .dots button[aria-current="true"]{background:#9a6f14}
 @media(min-width:901px){
- .slide-inner{max-width:none;margin:0;width:56vw;padding:64px 2vw 72px 64px}
+ .slide-inner{max-width:none;margin:0;width:56vw;padding:64px 2vw 72px 64px;justify-content:flex-start}
+}
+.slide-logo{display:none}
+@media(min-width:901px) and (max-width:1180px){nav{padding:14px 28px;gap:16px}.nav-links{gap:16px}.nav-links a{letter-spacing:1px;font-size:11px}.nav-cta{padding:10px 16px}.brand-name{font-size:22px;letter-spacing:2px}.brand-tag{letter-spacing:1.5px;font-size:10px}}
+@media(min-width:1100px){
+ .slide{flex-direction:row;align-items:flex-start}
+ .slide-logo{display:block;flex:none;width:clamp(120px,11vw,176px);height:auto;margin:64px 0 0 64px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28))}
+ .slide-inner{flex:none;width:auto;max-width:44vw;padding:64px 2vw 72px 3vw}
 }
 
 /* SECTIONS */
@@ -157,6 +164,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
 
 <header class="banner" aria-roledescription="carrousel" aria-label="Présentation">
   <div class="slide is-active" style="background-image:url('img/banner-infrastructure.webp')">
+    <img class="slide-logo" src="img/logo.webp" alt="" width="176" height="176">
     <div class="slide-inner">
       <p class="t">Gestion de votre <strong>INFRASTRUCTURE</strong> informatique</p>
       <p class="lead">Un environnement toujours <strong>PERFORMANT</strong></p>
@@ -174,6 +182,7 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
     </div>
   </div>
   <div class="slide" style="background-image:url('img/banner-conformite.webp')">
+    <img class="slide-logo" src="img/logo.webp" alt="" width="176" height="176">
     <div class="slide-inner">
       <p class="t">CONFORMITÉ et sécurité informatique</p>
       <p class="lead"><span class="g">Des accès</span> <strong>MAÎTRISÉS</strong><br><span class="g">Des données</span> <strong>PROTÉGÉES</strong></p>
