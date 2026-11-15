@@ -29,6 +29,10 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 .nav-links a:hover{color:var(--gold-light)}
 .nav-cta{border:1px solid var(--gold);color:var(--gold);padding:10px 24px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s;white-space:nowrap}
 .nav-cta:hover{background:var(--gold);color:var(--black)}
+.nav-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-support{border:1px solid var(--silver);color:var(--silver);padding:10px 20px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;transition:.25s;white-space:nowrap}
+.nav-support:hover{background:var(--silver);color:var(--black)}
+@media(min-width:901px) and (max-width:1100px){nav{flex-wrap:wrap;row-gap:10px}.nav-links{order:3;flex-basis:100%;justify-content:center}}
 
 /* BANNIÈRE — aucun lien, aucun bouton de navigation */
 .banner{position:relative;background:#f3f2ee;color:#111;overflow:hidden;border-bottom:1px solid var(--border)}
@@ -54,7 +58,7 @@ nav{display:flex;justify-content:space-between;align-items:center;gap:24px;paddi
 .dots{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:10px;z-index:3}
 .dots button{width:9px;height:9px;border-radius:50%;border:1px solid #9a6f14;background:transparent;cursor:pointer;padding:0}
 .dots button[aria-current="true"]{background:#9a6f14}
-@media(min-width:901px) and (max-width:1180px){nav{padding:14px 28px;gap:16px}.nav-links{gap:16px}.nav-links a{letter-spacing:1px;font-size:11px}.nav-cta{padding:10px 16px}.brand-name{font-size:22px;letter-spacing:2px}.brand-tag{letter-spacing:1.5px;font-size:10px}}
+@media(min-width:901px) and (max-width:1360px){nav{padding:14px 28px;gap:16px}.nav-links{gap:16px}.nav-links a{letter-spacing:1px;font-size:11px}.nav-cta,.nav-support{padding:10px 12px;letter-spacing:1px}.nav-actions{gap:8px}.brand-name{font-size:22px;letter-spacing:2px}.brand-tag{letter-spacing:1.5px;font-size:10px}}
 
 /* SECTIONS */
 section.s{padding:96px 64px;position:relative}
@@ -149,7 +153,10 @@ footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;paddin
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#confidentialite">Confidentialité</a></li>
   </ul>
-  <a class="nav-cta" href="mailto:eallain@ea-ia.ca?subject=Services%20TI%20-%20Demande">Me joindre</a>
+  <div class="nav-actions">
+    <a class="nav-support" href="https://passport.screenconnect.com/" target="_blank" rel="noopener noreferrer">Support à distance</a>
+    <a class="nav-cta" href="mailto:eallain@ea-ia.ca?subject=Services%20TI%20-%20Demande">Me joindre</a>
+  </div>
 </nav>
 
 <header class="banner" aria-roledescription="carrousel" aria-label="Présentation">
